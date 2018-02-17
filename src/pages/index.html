@@ -1,0 +1,61 @@
+---
+folioFiscal: "{{folioFiscal}}"
+fechaEmision: "{{fechaEmision}}"
+total: "{{total}}"
+emisorNombre: "{{emisorNombre}}"
+---
+<style type="text/css">
+  body,
+  html,
+  .body {
+    background: #f3f3f3 !important;
+  }
+</style>
+<container>
+
+  {{>header}}
+
+  <spacer size="16"></spacer>
+
+  <row>
+    <columns>
+      <h1>Estimado cliente</h1>
+      <p>Anexamos archivo correspondiente a:</p>
+      <p class="text-center"><strong>Comprobante Fiscal Digital y Representación Impresa:</strong></p>
+
+      <spacer size="16"></spacer>
+      <callout class="secondary">
+        <row>
+          <columns large="12">
+            <p>
+              <strong>Folio fiscal</strong><br/>
+              {{folioFiscal}}
+            </p>
+
+          </columns>
+        </row>
+        <row>
+          <columns large="6">
+            <p>
+              <strong>Fecha de emsión</strong><br/>
+            {{fechaEmision}}<br/>
+            </p>
+          </columns>
+          <columns large = "6">
+            <p>
+              <strong>Total</strong><br/>
+              {{total}}
+            </p>
+          </columns>
+        </row>
+      </callout>
+      <p>Gracias por su preferencia<p>
+      <p><strong>Atentamente,<strong><br/>
+      <strong>{{emisorNombre}}</strong></p>
+    </columns>
+
+  </row>
+
+  {{>footer}}
+
+</container>
